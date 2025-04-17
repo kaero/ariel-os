@@ -310,6 +310,9 @@ contexts:
       flash:
         cmd:
           - picotool load -u -v -x -t elf ${out}
+      uf2:
+        cmd:
+          - picotool uf2 convert -t elf ${out} ${out}.uf2 --family rp2350-arm-s --abs-block
 
   - name: esp
     parent: ariel-os
